@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 50px;
+  color: lightblue;
+  text-align: center;
+}
+
+.container {
+  height: 40vh;
+  width: 60%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.container__slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container__slide-active {
+  transform: translateX(0);
+}
+
+.container__slide-next {
+  transform: translateX(100%);
+}
+
+.container__slide-previous {
+  transform: translateX(-100%);
+}
+
+.container__slide-one {
+  background-image: url("/images/javascript.jpg");
+}
+
+.container__slide-two {
+  background-image: url("/images/slika1.jpg");
+}
+
+.container__slide-three {
+  background-image: url("/images/slika2.jpg");
+}
+
+.container__slide-four {
+  background-image: url("/images/slika3.jpg");
+}
+
+.buttons {
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  display: inline-block;
+  padding: 10px;
+  width: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+button i {
+  font-size: 20px;
+  color: lightblue;
+}
+
+button:hover {
+  border: lightblue 1px solid;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 499px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .container__slide {
+    background-size: contain;
+  }
+
+  .buttons {
+    margin: 10px auto;
+  }
+}/*# sourceMappingURL=main.css.map */
